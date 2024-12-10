@@ -16,58 +16,9 @@
 
 <body>
  <!-- Header section  -->
- <header class="container mt-2">
-  <div class="row bg-danger align-items-center ">
-    <div class="col-3 m-2">
-      <img src="images/sarkari_result_logo.png" class="w-50">
-    </div>
-    <div class="col-6 fw-bold text-center text-white">
-      <div class="text-uppercase display-5 justify-content-center mb-0">sarkari result</div>
-      <div class="text-uppercase fs-5 d-flex justify-content-center mt-0">www.sarkariresult.com</div>
-    </div>
-  </div>
-</header>
+ <?php include("header.php"); ?> 
  <!-- Navigation Menu -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://localhost/sarkari_result">Home</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="latest_job.php">Latest Job</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="result.php">Result</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="admit_card.php">Admit Card</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="#">Answer Key</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="#">Syllabus</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="#">Search</a>
-        </li>
-        <li class="nav-item border-start">
-          <a class="nav-link mx-3" href="#">Contant Us</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<?php include("nav.php"); ?>
 <!-- Navigation Menu closed  -->
     <div class="container">
         <span>You are here &gt; <a href="#">Home</a> &gt; Latest Job</span>
