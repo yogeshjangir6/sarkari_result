@@ -59,6 +59,5 @@
             </div>
         </div>
     </main>
-</body>
-
-</html>
+  <!-- Footer Menu  -->
+  <?php include("footer.php") ?>
