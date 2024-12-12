@@ -28,7 +28,7 @@
   <section class="container">
     <!-- Social Links  -->
     <div class="text-center fw-bold fs-5">
-      <a href="">Sarkari Result Android Apps</a> || <a href="">Sarkari Result Youtube Channel</a> || <a href="">Sarkari
+      <a href="">Sarkari Result Android Apps</a> || <a href=""><b style="font-size:50px;"></b> Sarkari Result Youtube Channel</a> || <a href="">Sarkari
         Result Apple / IOS Apps</a>|| <a href="">Follow Instagram</a>
     </div>
     <!-- Top Highlighted form links  -->
@@ -87,36 +87,21 @@
             <h2>Result</h2>
           </div>
           <div class="card-body text-start">
-            <ul>
+          <ul>
+            <?php
+             $sql = "SELECT `id`,`post_name` FROM `job_post` where `result`=1 limit 10";
+             $query = mysqli_query($conn,$sql);
+             if($query){
+              while($result_data = mysqli_fetch_assoc($query)){
+              ?>
+              <li class="pb-2"><a href="post.php?id=<?= $result_data['id']; ?>"><?= $result_data['post_name']; ?></a></li>
 
-              <li class="pb-2"><a href="#">SSC Exam Calendar 2025-2026</a></li>
-              <li class="pb-2"><a href="#">India Post GDS 5th Merit List / Result</a></li>
-              <li class="pb-2"><a href="#">SSC CGL 2024 Tier I Result</a></li>
-              <li class="pb-2"><a href="#">RSMSSB Hostel Superintendent Merit List 2024</a></li>
-              <li class="pb-2"><a href="#">IB ACIO Technical 2023 Final Result</a></li>
-              <li class="pb-2"><a href="#">CSIR CASE SO / ASO 2023 Result / Merit List</a></li>
-              <li class="pb-2"><a href="#">MPESB Sub Engineer & Other Post Result 2024</a></li>
-              <li class="pb-2"><a href="#">IBPS SO 14th Pre Exam Result 2024</a></li>
-              <li class="pb-2"><a href="#">NTA NTET 2024 Result / Score Card</a></li>
-              <li class="pb-2"><a href="#">UPPSC Assistant Town Planner 2023 Final Result</a></li>
-              <li class="pb-2"><a href="#">Nabard Assistant Manager Phase II Mains Result 2024</a></li>
-              <li class="pb-2"><a href="#">IOCL Non Executives Result 2024</a></li>
-              <li class="pb-2"><a href="#">Bihar BPSC 32 Civil Judge Final Result 2024</a></li>
-              <li class="pb-2"><a href="#">RSMSSB Agriculture Supervisor 2023 Final Result</a></li>
-              <li class="pb-2"><a href="#">RSMSSB Supervisor Woman Empowerment Result 2024</a></li>
-              <li class="pb-2"><a href="#">UPSC Engineering Services 2024 Marks</a></li>
-              <li class="pb-2"><a href="#">IBPS PO 14th Pre Exam Score Card / Marks</a></li>
-              <li class="pb-2"><a href="#">Bihar BPSC 69th Final Result 2024</a></li>
-              <li class="pb-2"><a href="#">IRDAI Assistant Manager Phase I Result 2024</a></li>
-              <li class="pb-2"><a href="#">CISCE Class 10th, 12th Time Table 2025</a></li>
-              <li class="pb-2"><a href="#">RSMSSB Junior Assistant / LDC Clerk Result 2024</a></li>
-              <li class="pb-2"><a href="#">SSB Constable Tradesman / HC Electrician Result 2024</a></li>
-              <li class="pb-2"><a href="#">UPSSSC Mukhya Sevika 2022 Mains Exam Result</a></li>
-              <li class="pb-2"><a href="#">UPSC Engineering Services 2024 Final Result</a></li>
-              <li class="pb-2"><a href="#">Indian Bank Apprentice Result 2024</a></li>
-              <li class="pb-2"><a href="#">UP Police Constable Result 2024 Declared</a></li>
-              <li class="pb-2"><a href="#">Canara Bank Apprentice Result 2024</a></li>
-              <li class="pb-2"><a href="#">IBPS PO 14th Pre Exam Result 2024</a></li>
+              <?php 
+              }
+
+             }
+            ?>
+           
             </ul>
             <div class="text-end">
               <a href="#" class="fw-bold btn btn-outline-success">View More</a>
