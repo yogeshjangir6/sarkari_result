@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sarkari Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .editor {
+            min-height: 150px;
+            padding: 10px;
+            width: 100%;
+            outline: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container mt-2">
+        <div class="row bg-danger align-items-center ">
+            <div class="col-3 m-2">
+                <img src="/sarkari_result/images/sarkari_result_logo.png" class="w-50">
+            </div>
+            <div class="col-6 fw-bold text-center text-white">
+                <div class="text-uppercase display-5 justify-content-center mb-0">sarkari result</div>
+                <div class="text-uppercase fs-5 d-flex justify-content-center mt-0">www.sarkariresult.com</div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link mx-3" href="latest_job.html">Latest Job</a>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link mx-3" href="#">Result</a>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link mx-3" href="#">Admit Card</a>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link mx-3" href="#">Answer Key</a>
+                    </li>
+                    <li class="nav-item border-start">
+                        <a class="nav-link mx-3" href="#">Syllabus</a>
+                    </li>
+                  
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+       <h1 class="h1 bg-primary text-white text-center p-3 mt-3"> Add New Job</h1>
+    </div>
+    <main class="container">
+        <form id="contentForm" method="POST" action="submit.php">
+
+            <section class="fs-4 my-4">
+                <div class="row pb-2">
+                    <div class="col text-danger fw-bold">Name of Post:</div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" name="post_name"
+                            placeholder="SSC Multi Tasking Non Technical Staff and Havaldar Recruitment 2024 Answer Key for 9583 Post" />
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col text-danger fw-bold">Post Date / Update:</div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" name="post_date" id=""
+                            placeholder="29 November 2024 | 05:16 PM" />
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col text-danger fw-bold">Short Information :</div>
+                    <div class="col-9">
+                        <textarea name="short_info" id="" class="form-control" rows="5"
+                            placeholder="write short information of post"></textarea>
+                    </div>
+                </div>
+            </section>
+            <section class="container border border-dark">
+                <div class="container">
+                    <!-- department name  -->
+                    <div class="py-2">
+                        <label for="departement_name" class="form-label"> Department Name</label>
+                        <input type="text" name="department_name" id="department_name" class="form-control"
+                            placeholder="Write name of department in which vacancy">
+                    </div>
+                    <!-- Recruitment Name  -->
+                    <div class="pb-2">
+                        <label for="recruitment_name" class="form-label">Recruitment Name</label>
+                        <input type="text" name="recruitment_name" id="" class="form-control"
+                            placeholder="Write recruitment name">
+                    </div>
+                    <!-- Notification full name  -->
+                    <div class="pb-2">
+                        <label for="notification_name" class="form-label">Notification Name</label>
+                        <input type="text" name="notification_name" id="" class="form-control"
+                            placeholder="write job notification name">
+                    </div>
+                </div>
+
+
+
+                <!-- Important dates and application fees -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-success text-center">
+                                <h2>Important Date</h2>
+                            </div>
+                            <div class="card-body fs-5">
+                                <table>
+                                    <tr>
+                                        <td>Start Date : </td>
+                                        <td><input type="date" name="start_date" id="" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Date: </td>
+                                        <td><input type="text" name="last_date" id="" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Result Date :</td>
+                                        <td> <input type="text" name="result_date" id="" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Answer Key Date:</td>
+                                        <td> <input type="text" name="answer_key_date" id="" class="form-control"></td>
+                                    </tr>
+                                </table>
+                                <div class="text-primary fs-6 mt-2">Write Here to add additional dates</div>
+                                <!-- first editable div -->
+                                <div class="editable-container mb-4">
+                                    <div class=" d-flex align-items-center">
+                                        <button type="button" class="btn btn-dark me-2"
+                                            onclick="document.execCommand('bold', false, '');">Bold</button>
+                                        <button type="button" class="btn btn-dark me-2"
+                                            onclick="document.execCommand('insertUnorderedList', false, '');">Unordered
+                                            List</button>
+                                    </div>
+
+                                    <div class="editor border-3 border-primary" contenteditable="true"
+                                        style="min-height: 200px;">
+                                    </div>
+                                    <input type="hidden" name="imp_dates" class="contentInput" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-success text-center">
+                                <h2>Application Fee</h2>
+                            </div>
+                            <div class="card-body fs-5">
+                                <!-- Custom Rich Text Editor to insert uo list, bold text, & table -->
+                                <!-- second editable div -->
+                                <div class="editable-container mb-4">
+                                    <div class="p-3 d-flex align-items-center">
+                                        <button type="button" class="btn btn-dark me-2"
+                                            onclick="document.execCommand('bold', false, '');">Bold</button>
+                                        <button type="button" class="btn btn-dark me-2"
+                                            onclick="document.execCommand('insertUnorderedList', false, '');">UL</button>
+                                        <input type="number" class="form-control d-inline w-25 me-2 rowsInput"
+                                            placeholder="Rows" min="1" />
+                                        <input type="number" class="form-control d-inline w-25 me-2 colsInput"
+                                            placeholder="Columns" min="1" />
+                                        <button type="button" class="btn btn-dark"
+                                            onclick="insertTable(this); return false;">Insert Table</button>
+                                    </div>
+                                    <div class="editor border-3 border-primary" contenteditable="true"
+                                        style="min-height: 200px;">
+
+                                    </div>
+                                    <input type="hidden" name="form_fees" class="contentInput" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Age limits group  -->
+                <div class="card">
+                    <div class="card-header text-primary text-center">
+                        <h2>Age Limit</h2>
+                    </div>
+                    <div class="card-body fs-5">
+                        <table>
+                            <tr>
+                                <td>Minimum Age : </td>
+                                <td><input type="text" name="min_age" id="" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum Age : </td>
+                                <td><input type="text" name="max_age" id="" class="form-control"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Notification name with total vacancy details  -->
+                <div class="container">
+                    <h2 class="text-success text-center">Vacancy Details, Total Post and Post wise Details
+                    </h2>
+                    <p class="fw-bold fs-5">Total Post <input type="number" name="total_post"
+                            class="form-control d-inline" placeholder="1200" /> </p>
+                </div>
+                <!-- Add Vacancy Details More Information like post wise-->
+                <!-- Custom Rich Text Editor to insert uo list, bold text, & table -->
+                <!-- editable div -->
+                <div class="editable-container mb-4">
+                    <div class="p-3 d-flex align-items-center">
+                        <button type="button" class="btn btn-dark me-2"
+                            onclick="document.execCommand('bold', false, '');">Bold</button>
+                        <button type="button" class="btn btn-dark me-2"
+                            onclick="document.execCommand('insertUnorderedList', false, '');">Unordered List</button>
+                        <input type="number" class="form-control d-inline w-auto me-2 rowsInput" placeholder="Rows"
+                            min="1" />
+                        <input type="number" class="form-control d-inline w-auto me-2 colsInput" placeholder="Columns"
+                            min="1" />
+                        <button type="button" class="btn btn-dark" onclick="insertTable(this); return false">Insert
+                            Table</button>
+                    </div>
+                    <div class="editor border-3 border-primary" contenteditable="true" style="min-height: 200px;">
+                    </div>
+                    <input type="hidden" name="vacancy_details_more" class="contentInput" />
+
+                </div>
+                <!-- form filling details  -->
+                <div class="card">
+                    <div class="card-header text-center text-success">
+                        <h2>How to Fill Form Instructions</h2>
+                    </div>
+                    <div class="card-body fs-5">
+                        <!-- How to fill form rich text editor,  insert Unordered List   -->
+                        <!--  editable div -->
+                        <div class="editable-container mb-4">
+                            <div class="p-3 d-flex align-items-center">
+                                <button type="button" class="btn btn-dark me-2"
+                                    onclick="document.execCommand('bold', false, '');">Bold</button>
+                                <button type="button" class="btn btn-dark me-2"
+                                    onclick="document.execCommand('insertUnorderedList', false, '');">Unordered
+                                    List</button>
+                                <input type="number" class="form-control d-inline w-auto me-2 rowsInput"
+                                    placeholder="Rows" min="1" />
+                                <input type="number" class="form-control d-inline w-auto me-2 colsInput"
+                                    placeholder="Columns" min="1" />
+                                <button type="button" class="btn btn-dark"
+                                    onclick="insertTable(this); return false;">Insert Table</button>
+                            </div>
+                            <div class="editor border-3 border-primary" contenteditable="true"
+                                style="min-height: 200px;">
+
+                            </div>
+                            <input type="hidden" name="form_filling_guides" class="contentInput" />
+
+                        </div>
+                    </div>
+                </div>
+                <!-- usefull links section -->
+                <section>
+
+                    <h2 class="text-center text-success">Some Useful Important Links
+                    </h2>
+
+                    <div class="row border text-center fw-bold fs-5">
+                        <div class="col border border-dark p-3">Apply Online</div>
+                        <div class="col border border-dark p-3"><input type="text" name="apply_online" id=""
+                                class="form-control"></div>
+                    </div>
+
+                    <div class="row border text-center fw-bold fs-5">
+                        <div class="col border border-dark p-3">Download Notification</div>
+                        <div class="col border border-dark p-3"><input type="text" name="notification_link" id=""
+                                class="form-control"></div>
+                    </div>
+                    <div class="row border text-center fw-bold fs-5">
+                        <div class="col border border-dark p-3">Official Website</div>
+                        <div class="col border border-dark p-3"><input type="text" name="official_link" id=""
+                                class="form-control"></div>
+                    </div>
+                    <div class="row border text-center fw-bold fs-5">
+                        <div class="col border border-dark p-3">Add More Information</div>
+
+                    </div>
+                    <!-- First editable div -->
+                    <div class="editable-container mb-4">
+                        <div class="p-3 d-flex align-items-center">
+                            <button type="button" class="btn btn-dark me-2"
+                                onclick="document.execCommand('bold', false, '');">Bold</button>
+                            <button type="button" class="btn btn-dark me-2"
+                                onclick="document.execCommand('insertUnorderedList', false, '');">Unordered
+                                List</button>
+                            <input type="number" class="form-control d-inline w-auto me-2 rowsInput" placeholder="Rows"
+                                min="1" />
+                            <input type="number" class="form-control d-inline w-auto me-2 colsInput"
+                                placeholder="Columns" min="1" />
+                            <button type="button" class="btn btn-dark" onclick="insertTable(this);return false;">Insert
+                                Table</button>
+                        </div>
+                        <div class="editor border-3 border-primary" contenteditable="true" style="min-height: 200px;">
+                        </div>
+                        <input type="hidden" name="important_links" class="contentInput" />
+
+                    </div>
+                </section>
+            </section>
+           <div class="d-grid my-4">
+             <!-- Submit Button -->
+             <button type="submit" class="btn btn-lg btn-primary">Add Job</button>
+           </div>
+        </form>
+    </main>
+</body>
+<script>
+    // Function to insert a table in the specific editable div
+    function insertTable(button) {
+        const container = button.closest('.editable-container');
+        const rows = parseInt(container.querySelector('.rowsInput').value) || 3;
+        const cols = parseInt(container.querySelector('.colsInput').value) || 3;
+
+        const table = document.createElement('table');
+        table.className = "table table-bordered border-primary";
+        table.border = "border";
+        for (let i = 0; i < rows; i++) {
+            const tr = document.createElement('tr');
+            for (let j = 0; j < cols; j++) {
+                const td = document.createElement('td');
+                td.innerHTML = `Row ${i + 1} Col ${j + 1}`;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+
+        const editableArea = container.querySelector('.editor');
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        range.insertNode(table);
+
+        // Clear the inputs after inserting the table
+        container.querySelector('.rowsInput').value = '';
+        container.querySelector('.colsInput').value = '';
+    }
+
+    // Function to submit all editable div contents in a single form
+    document.getElementById('contentForm').addEventListener('submit', function (event) {
+        const editors = document.querySelectorAll('.editable-container .editor');
+        editors.forEach((editor, index) => {
+            const hiddenInput = editor.closest('.editable-container').querySelector('.contentInput');
+            hiddenInput.value = editor.innerHTML; // Set content of each editor to hidden input
+        });
+    });
+</script>
+
+</html>
