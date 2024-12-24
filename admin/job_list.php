@@ -1,3 +1,6 @@
+<?php
+require_once("../conn.php"); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -58,18 +61,47 @@
         <div class="card shadow-lg">
             <div class="card-header text-center bg-primary text-white fs-2">Job Listing</div>
             <div class="card-body text-center">
+                <?php
+                if(isset($_GET['error']) && $_GET['error']){
+                    ?>
+                    <div class="alert alert-danger">
+                        Data Deleted Successfully
+                    </div>
+                    <?php
+                }
+                ?>
+                 <?php
+                if(isset($_GET['success']) && $_GET['success']){
+                    ?>
+                    <div class="alert alert-success">
+                        Data  Successfully Inserted
+                    </div>
+                    <?php
+                }
+                ?>
                <table class="table-bordered table-primary table-striped">
                 <tr>
                     <th>Job Titles</th>
                     <th>Action</th>
                 </tr>
-                <tr>
-                    <td>Jobs</td>
+                <?php
+                $sql = "SELECT `post_name`,`id` FROM `job_post`";
+                $query = mysqli_query($conn,$sql);
+
+                while($data = mysqli_fetch_assoc($query))
+                {
+                    ?>
+                     <tr>
+                    <td><a href="http://localhost/sarkari_result/post.php?id=<?php echo $data['id']; ?>"><?php echo $data['post_name']; ?></a></td>
                     <td>   
                         <a href="" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                        <a href="http://localhost/sarkari_result/admin/submit.php?delete=yes&id=<?php echo $data['id']; ?>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                     </td>
                 </tr>
+                    <?php
+                }
+                ?>
+               
                </table>
             </div>
         </div>

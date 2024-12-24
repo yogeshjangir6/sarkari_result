@@ -43,9 +43,19 @@ if(isset($_POST['add_job'])){
     //Execute DB query
     $query = mysqli_query($conn,$sql);
     if($query){
-      echo "Data Inserted Successfully";
+      header("Location:http://localhost/sarkari_result/admin/job_list.php?success=1");
     }else{
       echo "Try Again";
     }    
 
+}
+
+if(isset($_GET['delete'])){
+  $id = $_GET['id'];
+  
+  $sql = "DELETE FROM `job_post` WHERE `id`=$id";
+  $query = mysqli_query($conn,$sql);
+  if($query){
+    header("Location:http://localhost/sarkari_result/admin/job_list.php?error=1");
+  }
 }
